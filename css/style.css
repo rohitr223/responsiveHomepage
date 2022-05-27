@@ -1,0 +1,114 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+#header{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.75)) ,url("../img/mountains.jpg");
+    min-height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links{
+    flex: 1;
+    text-align:right;
+
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.links{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 17px;
+    transition: 0.5s;
+}
+.links:hover{
+    border-bottom: 5px solid rgb(255, 106, 0);
+}
+
+.text-box{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1{
+    font-size: 62px;
+}
+
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+}
+
+.text-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 17px;
+    background: transparent;
+    position: relative;
+    font-weight: 700;
+    transition: 1s;
+    border-radius: 4px;
+}
+
+.text-btn:hover{
+    color: black;
+    background-color: darkcyan;
+}
+
+/* To hode the close and menu icons*/
+.close-icon, .menu-icon{
+    display:none;
+}
+
+@media(max-width:700px){
+    .text-box h1{
+        font-size: 30px;
+    }
+    .nav-links ul li{
+        display:block;
+    }
+    .nav-links{
+        position: fixed;
+        background: darkgoldenrod;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    .close-icon, .menu-icon{
+        display:block;
+        margin: 10px;
+    }
+    
+}
